@@ -711,3 +711,83 @@ body {
         font-size: 2.5rem;
     }
 }
+
+ .wedding-party {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .party-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .party-category {
+    text-align: center;
+  }
+  
+  .category-title {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+  
+  .name-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .name-list li {
+    padding: 5px;
+  }
+  
+  .special-roles-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .principal-sponsors .name-list,
+  .guests .name-list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  
+  @media (max-width: 768px) {
+    .name-list {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .principal-sponsors .name-list,
+    .guests .name-list {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .name-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .special-roles-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .party-category {
+      margin-bottom: 20px;
+    }
+    
+    .category-title {
+      font-size: 1.2rem;
+    }
+  }
