@@ -51,7 +51,7 @@ body {
 
 .header {
     position: relative;
-    background: linear-gradient(rgba(255, 215, 0, 0.3), rgba(218, 165, 32, 0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)), url('images/bg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -408,7 +408,7 @@ body {
 }
 
 .rsvp-form {
-    background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);
+    background: linear-gradient(135deg, #87a96b 0%, #9eb88d 100%);
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(139, 69, 19, 0.3);
@@ -711,83 +711,3 @@ body {
         font-size: 2.5rem;
     }
 }
-
- .wedding-party {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .party-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .party-category {
-    text-align: center;
-  }
-  
-  .category-title {
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-  }
-  
-  .name-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-  }
-  
-  .name-list li {
-    padding: 5px;
-  }
-  
-  .special-roles-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .principal-sponsors .name-list,
-  .guests .name-list {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  }
-  
-  @media (max-width: 768px) {
-    .name-list {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-    
-    .principal-sponsors .name-list,
-    .guests .name-list {
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .name-list {
-      grid-template-columns: 1fr;
-    }
-    
-    .special-roles-container {
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-    
-    .party-category {
-      margin-bottom: 20px;
-    }
-    
-    .category-title {
-      font-size: 1.2rem;
-    }
-  }
