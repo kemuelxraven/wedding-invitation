@@ -711,3 +711,74 @@ body {
         font-size: 2.5rem;
     }
 }
+
+/* Base styles for all devices */
+.wedding-party .name-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+/* Special styles for categories with many names */
+.principal-sponsors .name-list,
+.guests .name-list {
+    display: block;
+    columns: 1;
+    column-gap: 2rem;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+    .wedding-party .name-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .principal-sponsors .name-list,
+    .guests .name-list {
+        columns: 2;
+    }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+
+    .principal-sponsors .name-list,
+    .guests .name-list {
+        columns: 3;
+    }
+}
+
+/* Layout adjustments */
+.party-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .party-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .special-role {
+        grid-column: span 1;
+    }
+
+    .principal-sponsors,
+    .guests {
+        grid-column: 1 / -1;
+    }
+}
+
+.party-category {
+    text-align: center;
+}
+
+.category-title {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+}
