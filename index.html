@@ -57,7 +57,7 @@ body {
 
 .header {
     position: relative;
-    background: linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)), url('https://kemuelxraven.github.io/wedding-invitation/kim1.png');
+    background: linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)), url('kim1.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -480,6 +480,35 @@ body {
     font-size: 0.8rem;
 }
 
+/* Principal Sponsors Table Styling */
+.name-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.name-table td {
+  padding: 0.8rem 1rem;
+  color: #8B4513;
+  font-size: 1rem;
+  text-align: center;
+  position: relative;
+  transition: color 0.3s ease;
+  vertical-align: top;
+  width: 50%; /* Ensure equal width for both columns */
+}
+
+.name-table td:hover {
+  color: #DAA520;
+}
+
+.name-table td::before {
+  content: '♥';
+  color: rgba(255, 215, 0, 0.7);
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
 /* Special styling for Maid of Honor and Best Man */
 .special-role {
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(218, 165, 32, 0.2) 100%);
@@ -674,10 +703,6 @@ body {
 
 /* Tablet and larger screens */
 @media (min-width: 768px) {
-    .wedding-party .name-list {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .principal-sponsors .name-list,
     .guests .name-list {
         columns: 2;
@@ -834,30 +859,54 @@ body {
         <div class="party-grid">
           <div class="party-category principal-sponsors">
             <h3 class="category-title">Principal Sponsors</h3>
-            <ul class="name-list">
-              <li>Ninong Daniel Caunin</li>
-              <li>Ninang Brigilda Caunin</li>
-              <li>Ninong Jethro Pilapil</li>
-              <li>Ninang Grace Caunin</li>
-              <li>Ninong Jehristian Alcabasa</li>
-              <li>Ninang Jhenalyn Pilapil</li>
-              <li>Ninong Gilbert Gabito</li>
-              <li>Ninang Jonnalaine Javier</li>
-              <li>Ninong Jherome Pilapil</li>
-              <li>Ninang Abegail Pilapil</li>
-              <li>Ninong Rico Nite</li>
-              <li>Ninang Malou Malinao</li>
-              <li>Ninong Milo Cantillan</li>
-              <li>Ninang Ruby Emberga</li>
-              <li>Ninong Arcelito Quiatchon</li>
-              <li>Ninang Len Bernabe</li>
-              <li>Ninong Roderick Saporna</li>
-              <li>Ninang Melanie Saporna</li>
-              <li>Ninong Liberato Elago</li>
-              <li>Ninang Jenie Rocero</li>
-              <li>Ninong JSSUPT Ray De Luna</li>
-              <li>Ninang Thess Agustin</li>
-            </ul>
+            <table class="name-table">
+              <tbody>
+                <tr>
+                  <td>Ninong Daniel Caunin</td>
+                  <td>Ninang Brigilda Caunin</td>
+                </tr>
+                <tr>
+                  <td>Ninong Jethro Pilapil</td>
+                  <td>Ninang Grace Caunin</td>
+                </tr>
+                <tr>
+                  <td>Ninong Jehristian Alcabasa</td>
+                  <td>Ninang Jhenalyn Pilapil</td>
+                </tr>
+                <tr>
+                  <td>Ninong Gilbert Gabito</td>
+                  <td>Ninang Jonnalaine Javier</td>
+                </tr>
+                <tr>
+                  <td>Ninong Jherome Pilapil</td>
+                  <td>Ninang Abegail Pilapil</td>
+                </tr>
+                <tr>
+                  <td>Ninong Rico Nite</td>
+                  <td>Ninang Malou Malinao</td>
+                </tr>
+                <tr>
+                  <td>Ninong Milo Cantillan</td>
+                  <td>Ninang Ruby Emberga</td>
+                </tr>
+                <tr>
+                  <td>Ninong Arcelito Quiatchon</td>
+                  <td>Ninang Len Bernabe</td>
+                </tr>
+                <tr>
+                  <td>Ninong Roderick Saporna</td>
+                  <td>Ninang Melanie Saporna</td>
+                </tr>
+                <tr>
+                  <td>Ninong Liberato Elago</td>
+                  <td>Ninang Jenie Rocero</td>
+                </tr>
+                <tr>
+                  <td>Ninong JSSUPT Ray De Luna</td>
+                  <td>Ninang Thess Agustin</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <div class="party-category special-role">
@@ -891,12 +940,12 @@ body {
           <div class="party-category">
             <h3 class="category-title">Bridesmaids</h3>
             <ul class="name-list">
-              <li>Nicole Velasco</li>
               <li>Danise Monter</li>
-              <li>Yna Grace Pilapil</li>
-              <li>Lorica Jane Nite</li>
               <li>Kate Manalo</li>
+              <li>Yna Grace Pilapil</li>
+              <li>Nicole Velasco</li>
               <li>Coleen Mance</li>
+              <li>Lorica Jane Nite</li>
             </ul>
           </div>
 
@@ -916,6 +965,7 @@ body {
             <h3 class="category-title">Guests</h3>
             <ul class="name-list">
               <li>Renzo San Juan</li>
+              <li>Librada Entredicho</li>
               <li>Rhodora Lucero</li>
               <li>Zoe Journey Lucero</li>
               <li>Ivan Emberga</li>
@@ -986,12 +1036,13 @@ body {
               <li>Kenneth Rejano</li>
               <li>Christian Losamnia</li>
               <li>Robel Ann Ramilo</li>
-              <li>Ochie Wife</li>
-              <li>Milo Wife</li>
+              <li>Jannine Matias</li>
+              <li>Mrs. Cantillan</li>
               <li>Quencie Nissi Brocoy</li>
               <li>Mariejo Agustin</li>
               <li>Aaron Sambajon</li>
               <li>Remedios Solluege</li>
+              <li>Christian Frias</li>
             </ul>
           </div>
 
@@ -1053,4 +1104,4 @@ body {
     </script>
   </body>
 
-</html> 
+</html>
