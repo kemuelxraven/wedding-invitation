@@ -57,7 +57,7 @@ body {
 
 .header {
     position: relative;
-    background: linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)), url('kim1.png');
+    background: linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)), url('https://github.com/kemuelxraven/wedding-invitation/kim1.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -495,7 +495,7 @@ body {
   position: relative;
   transition: color 0.3s ease;
   vertical-align: top;
-  width: 50%; /* Ensure equal width for both columns */
+  width: 50%;
 }
 
 .name-table td:hover {
@@ -635,29 +635,45 @@ body {
 /* Responsive design */
 @media (max-width: 768px) {
     .names {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
 
     .subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        padding: 0 1rem;
     }
 
     .date {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 
-
     .header-hashtag {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        padding: 0 1rem;
     }
 
     .section {
-        margin: 0 1rem 3rem;
-        padding: 2rem 1.5rem;
+        margin: 0 0.5rem 2rem;
+        padding: 1.5rem 1rem;
     }
 
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .event-details {
+        font-size: 1rem;
+    }
+
+    .venue {
+        font-size: 1.2rem;
+    }
+
+    .venue-address {
+        font-size: 0.9rem;
     }
 
     .party-grid {
@@ -666,11 +682,47 @@ body {
     }
 
     .party-category {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .category-title {
+        font-size: 1.3rem;
+    }
+
+    .name-list {
+        columns: 1 !important;
+    }
+
+    .name-list li {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+    }
+
+    .name-table {
+        display: block;
+    }
+
+    .name-table tbody {
+        display: block;
+    }
+
+    .name-table tr {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .name-table td {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.5rem;
+        text-align: center;
+        border-bottom: none;
     }
 
     .color-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
@@ -678,13 +730,22 @@ body {
         padding: 1rem;
     }
 
+    .color-role {
+        font-size: 1.1rem;
+    }
+
+    .color-name {
+        font-size: 0.95rem;
+    }
+
     .policy-text {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .policy-highlight {
         padding: 0.8rem 1rem;
         margin: 1rem 0;
+        font-size: 0.95rem;
     }
 
     .policy-icon {
@@ -692,12 +753,47 @@ body {
     }
 
     .hashtag {
-        font-size: 1.3rem;
-        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+        padding: 0.8rem 1.2rem;
     }
 
     .thank-you-message {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .thank-you-emoji {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .names {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .date {
+        font-size: 0.9rem;
+    }
+
+    .header-hashtag {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        margin: 0 0.5rem 1.5rem;
+        padding: 1.5rem 0.8rem;
+    }
+
+    .party-category {
+        padding: 1.2rem 0.8rem;
     }
 }
 
@@ -728,6 +824,17 @@ body {
     .guests .name-list {
         columns: 3;
     }
+}
+
+.hashtag-container {
+    overflow-y: auto;
+}
+.hashtag-wrapper {
+    min-height: 100px;
+}
+.hashtag {
+    font-size: 1.2rem;
+    font-weight: 300;
 }
     </style>
   </head>
@@ -1050,7 +1157,7 @@ body {
             <h3 class="category-title">Suppliers</h3>
             <ul class="name-list" style="columns: 1; column-gap: 2rem;">
               <li><b>Catering and Services: </b>Fanny Catering Services</li>
-              <li><b>Photo and Video Coverage: </b>Gelardo Creatives</li>
+              <li><b>Photo and Video Coverage: </b>Geraldo Creatives</li>
               <li><b>Host: </b>Jomar Aquino</li>
               <li><b>Sounds and Lights: </b>Audio District</li>
               <li><b>Coordinator: </b>Junto's Events Organizer</li>
@@ -1071,7 +1178,11 @@ body {
           <br><br>
           See you on our special day!
         </div>
-        <div class="hashtag">#APerfectNiteForKemuel&Raven</div>
+        <div class="hashtag-container">
+          <div class="hashtag-wrapper">
+            <div class="hashtag">#APerfectNiteForKemuel&Raven</div>
+          </div>
+        </div>
       </div>
     </div>
 
