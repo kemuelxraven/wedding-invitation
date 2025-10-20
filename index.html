@@ -1,1282 +1,1316 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Kemuel and Raven's Wedding Invitation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
-      rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #FFF8DC 0%, #F5DEB3 30%, #FFE4B5 70%, #DEB887 100%);
-    color: #8B4513;
-    overflow-x: hidden;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FFF8DC 0%, #F5DEB3 30%, #FFE4B5 70%, #DEB887 100%);
+            color: #8B4513;
+            overflow-x: hidden;
+        }
 
-/* Floating particles animation */
-.particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-}
+        /* Floating particles animation */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
 
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(255, 215, 0, 0.8);
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
-}
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 215, 0, 0.8);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-        opacity: 0;
-    }
-    10%, 90% {
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(-100px) rotate(180deg);
-    }
-}
+        @keyframes float {
 
-.header {
-    position: relative;
-    background: linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)), 
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-100px) rotate(180deg);
+            }
+        }
+
+        .header {
+            position: relative;
+            background: linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)),
                 url('https://raw.githubusercontent.com/kemuelxraven/wedding-invitation/main/kim1.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    z-index: 2;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, rgba(255, 248, 220, 0.2) 0%, transparent 50%);
-    animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-    0%, 100% {
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 0.7;
-    }
-}
-
-.names {
-    font-family: 'Great Vibes', cursive;
-    font-size: 5rem;
-    margin: 0;
-    text-shadow: 3px 3px 10px rgba(139, 69, 19, 0.5);
-    animation: fadeInUp 1.5s ease-out;
-    background: linear-gradient(45deg, #FFF8DC, #FFD700, #FFFFE0, #F0E68C);
-    background-size: 300% 300%;
-    background-position: 0% 50%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: fadeInUp 1.5s ease-out, textShine 4s ease-in-out infinite;
-}
-
-@keyframes textShine {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-}
-
-.subtitle {
-    font-size: 1.3rem;
-    margin: 1rem 0;
-    font-weight: 300;
-    letter-spacing: 2px;
-    animation: fadeInUp 1.5s ease-out 0.5s both;
-    color: #FFF8DC;
-    text-shadow: 2px 2px 8px rgba(139, 69, 19, 0.4);
-}
-
-.date {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 1rem;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid rgba(255, 248, 220, 0.8);
-    border-radius: 50px;
-    backdrop-filter: blur(10px);
-    animation: fadeInUp 1.5s ease-out 1s both;
-    background: rgba(255, 215, 0, 0.2);
-    color: #FFF8DC;
-}
-
-.header-hashtag {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    letter-spacing: 1px;
-    animation: fadeInUp 1.5s ease-out 1.5s both;
-    color: #FFF8DC;
-    text-shadow: 2px 2px 8px rgba(139, 69, 19, 0.4);
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #FFF8DC;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-.content {
-    position: relative;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #FFFACD 0%, #F5DEB3 50%, #DEB887 100%);
-    z-index: 2;
-}
-
-.section {
-    max-width: 1200px;
-    margin: 0 auto 4rem;
-    text-align: center;
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 215, 0, 0.4);
-    animation: slideInUp 0.8s ease-out;
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.section-title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
-    color: #B8860B;
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, #FFD700, #DEB887);
-    border-radius: 2px;
-}
-
-.event-details {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #8B4513;
-    margin-bottom: 2rem;
-}
-
-.venue {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #DAA520;
-    margin: 1.5rem 0 0.5rem 0;
-}
-
-.venue-address {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #8B4513;
-    margin: 0.5rem 0 1.5rem 0;
-    font-style: italic;
-}
-
-/* Color Theme Section */
-.color-theme {
-    background: linear-gradient(135deg, rgba(255, 248, 220, 0.3) 0%, rgba(255, 215, 0, 0.1) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.5);
-}
-
-.color-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.color-item {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-.color-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(184, 134, 11, 0.2);
-}
-
-.color-role {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #B8860B;
-    margin-bottom: 0.5rem;
-}
-
-.color-name {
-    font-size: 1rem;
-    color: #8B4513;
-    margin-bottom: 1rem;
-}
-
-.color-swatch {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
-    border: 3px solid rgba(255, 248, 220, 0.9);
-}
-
-.color-golden-yellow {
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-}
-
-.color-pastel-yellow {
-    background: linear-gradient(135deg, #FFFFE0, #F0E68C);
-}
-
-.color-light-brown {
-    background: linear-gradient(135deg, #D2B48C, #DEB887);
-}
-
-.color-brown {
-    background: linear-gradient(135deg, #8B4513, #A0522D);
-}
-
-.color-beige {
-    background: linear-gradient(135deg, #F5F5DC, #D2B48C);
-}
-
-/* Guest Policy Announcement Section */
-.guest-policy {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 248, 220, 0.15) 100%);
-    border: 2px solid rgba(255, 215, 0, 0.4);
-    position: relative;
-    overflow: hidden;
-}
-
-.guest-policy::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.08) 50%, transparent 70%);
-    animation: shimmerPolicy 4s ease-in-out infinite;
-}
-
-@keyframes shimmerPolicy {
-    0%, 100% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(100%);
-    }
-}
-
-.policy-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #DAA520;
-    position: relative;
-    z-index: 1;
-}
-
-.policy-text {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: #8B4513;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 1.5rem;
-}
-
-.policy-highlight {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 248, 220, 0.3));
-    padding: 1rem 1.5rem;
-    border-radius: 15px;
-    margin: 1.5rem 0;
-    border-left: 4px solid #FFD700;
-    font-weight: 500;
-    color: #8B4513;
-    position: relative;
-    z-index: 1;
-}
-
-.policy-heart {
-    color: #B8860B;
-    font-size: 1.2rem;
-    margin: 0 0.3rem;
-}
-
-.policy-footer {
-    font-style: italic;
-    color: #8B4513;
-    font-size: 1rem;
-    margin-top: 1rem;
-    position: relative;
-    z-index: 1;
-}
-
-/* Wedding Party Styles */
-.wedding-party {
-    background: linear-gradient(135deg, rgba(255, 248, 220, 0.2) 0%, rgba(245, 222, 179, 0.2) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.4);
-}
-
-.party-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.party-category {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(139, 69, 19, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    text-align: center;
-}
-
-.party-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(184, 134, 11, 0.15);
-}
-
-.category-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #B8860B;
-    margin-bottom: 1rem;
-    text-align: center;
-    position: relative;
-}
-
-.category-title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 1px;
-    background: #DEB887;
-}
-
-.name-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-}
-
-.name-list li {
-    padding: 0.5rem 0;
-    color: #8B4513;
-    font-size: 1rem;
-    position: relative;
-    transition: color 0.3s ease;
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-
-.name-list li:hover {
-    color: #DAA520;
-}
-
-.name-list li::before {
-    content: '♥';
-    color: rgba(255, 215, 0, 0.7);
-    margin-right: 0.5rem;
-    font-size: 0.8rem;
-}
-
-/* Principal Sponsors Table Styling */
-.name-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-.name-table td {
-  padding: 0.8rem 1rem;
-  color: #8B4513;
-  font-size: 1rem;
-  text-align: center;
-  position: relative;
-  transition: color 0.3s ease;
-  vertical-align: top;
-  width: 50%;
-}
-
-.name-table td:hover {
-  color: #DAA520;
-}
-
-.name-table td::before {
-  content: '♥';
-  color: rgba(255, 215, 0, 0.7);
-  margin-right: 0.5rem;
-  font-size: 0.8rem;
-}
-
-/* Special styling for Maid of Honor and Best Man */
-.special-role {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(218, 165, 32, 0.2) 100%);
-    border: 2px solid rgba(255, 215, 0, 0.6);
-}
-
-.special-role .category-title {
-    color: #B8860B;
-}
-
-.special-role .name-list li::before {
-    content: '👑';
-    color: #FFD700;
-}
-
-.principal-sponsors .name-list,
-.guests .name-list {
-    display: block;
-    columns: 1;
-    column-gap: 2rem;
-}
-
-/* Thank You Section */
-.thank-you-section {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 248, 220, 0.25) 100%);
-    border: 2px solid rgba(255, 215, 0, 0.5);
-    padding: 3rem 2rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.thank-you-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
-    animation: pulse 3s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 0.5;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
-.thank-you-emoji {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
-}
-
-.thank-you-message {
-    font-size: 1.3rem;
-    color: #8B4513;
-    margin-bottom: 2rem;
-    line-height: 1.8;
-    position: relative;
-    z-index: 1;
-}
-
-.hashtag {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #B8860B;
-    margin-top: 1.5rem;
-    padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50px;
-    display: inline-block;
-    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hashtag:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(184, 134, 11, 0.2);
-}
-
-/* Hearts animation */
-.hearts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.heart {
-    position: absolute;
-    color: rgba(255, 215, 0, 0.7);
-    font-size: 20px;
-    animation: heartFloat 4s linear infinite;
-}
-
-@keyframes heartFloat {
-    0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100px) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .names {
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-        letter-spacing: 1px;
-        padding: 0 1rem;
-    }
-
-    .date {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .header-hashtag {
-        font-size: 0.9rem;
-        padding: 0 1rem;
-    }
-
-    .section {
-        margin: 0 0.5rem 2rem;
-        padding: 1.5rem 1rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .event-details {
-        font-size: 1rem;
-    }
-
-    .venue {
-        font-size: 1.2rem;
-    }
-
-    .venue-address {
-        font-size: 0.9rem;
-    }
-
-    .party-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .party-category {
-        padding: 1.5rem 1rem;
-    }
-
-    .category-title {
-        font-size: 1.3rem;
-    }
-
-    .name-list {
-        columns: 1 !important;
-    }
-
-    .name-list li {
-        font-size: 0.95rem;
-        padding: 0.4rem 0;
-    }
-
-    .name-table {
-        display: block;
-    }
-
-    .name-table tbody {
-        display: block;
-    }
-
-    .name-table tr {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0;
-        margin-bottom: 0;
-    }
-
-    .name-table td {
-        display: block;
-        width: 100%;
-        padding: 0.5rem 0.5rem;
-        text-align: center;
-        border-bottom: none;
-    }
-
-    .color-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .color-item {
-        padding: 1rem;
-    }
-
-    .color-role {
-        font-size: 1.1rem;
-    }
-
-    .color-name {
-        font-size: 0.95rem;
-    }
-
-    .policy-text {
-        font-size: 0.95rem;
-    }
-
-    .policy-highlight {
-        padding: 0.8rem 1rem;
-        margin: 1rem 0;
-        font-size: 0.95rem;
-    }
-
-    .policy-icon {
-        font-size: 2.5rem;
-    }
-
-    .hashtag {
-        font-size: 1.2rem;
-        padding: 0.8rem 1.2rem;
-    }
-
-    .thank-you-message {
-        font-size: 1rem;
-    }
-
-    .thank-you-emoji {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .names {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 0.9rem;
-    }
-
-    .date {
-        font-size: 0.9rem;
-    }
-
-    .header-hashtag {
-        font-size: 0.8rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .section {
-        margin: 0 0.5rem 1.5rem;
-        padding: 1.5rem 0.8rem;
-    }
-
-    .party-category {
-        padding: 1.2rem 0.8rem;
-    }
-}
-
-/* Tablet and larger screens */
-@media (min-width: 768px) {
-    .principal-sponsors .name-list,
-    .guests .name-list {
-        columns: 2;
-    }
-
-    .party-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .special-role {
-        grid-column: span 1;
-    }
-
-    .principal-sponsors,
-    .guests {
-        grid-column: 1 / -1;
-    }
-}
-
-/* Desktop screens */
-@media (min-width: 1024px) {
-    .principal-sponsors .name-list,
-    .guests .name-list {
-        columns: 3;
-    }
-}
-
-.hashtag-container {
-    overflow-y: auto;
-}
-.hashtag-wrapper {
-    min-height: 100px;
-}
-.hashtag {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-      /* iOS specific fixes */
-@supports (-webkit-touch-callout: none) {
-    .header {
-        background-attachment: scroll; /* iOS doesn't support fixed backgrounds well */
-    }
-}
-
-/* iPhone specific fixes */
-@media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
-    .header {
-        background-attachment: scroll; /* Mobile devices get scroll instead */
-        background-size: cover;
-        -webkit-background-size: cover;
-    }
-}
-
-      @media (min-width: 769px) {
-    .header {
-        background-attachment: fixed;
-    }
-}
-
-      @media (max-width: 768px) {
-    .header {
-        background-attachment: scroll;
-        /* Create depth with multiple background layers */
-        background-image: 
-            linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)),
-            url('https://raw.githubusercontent.com/kemuelxraven/wedding-invitation/main/kim1.png');
-    }
-  
-    .header.scrolled {
-        background-position: center 10%;
-        transition: background-position 0.3s ease;
-    }
-}
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            z-index: 2;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 248, 220, 0.2) 0%, transparent 50%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            margin: 0;
+            text-shadow: 3px 3px 10px rgba(139, 69, 19, 0.5);
+            animation: fadeInUp 1.5s ease-out;
+            background: linear-gradient(45deg, #FFF8DC, #FFD700, #FFFFE0, #F0E68C);
+            background-size: 300% 300%;
+            background-position: 0% 50%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1.5s ease-out, textShine 4s ease-in-out infinite;
+        }
+
+        @keyframes textShine {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            font-weight: 300;
+            letter-spacing: 2px;
+            animation: fadeInUp 1.5s ease-out 0.5s both;
+            color: #FFF8DC;
+            text-shadow: 2px 2px 8px rgba(139, 69, 19, 0.4);
+        }
+
+        .date {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid rgba(255, 248, 220, 0.8);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1.5s ease-out 1s both;
+            background: rgba(255, 215, 0, 0.2);
+            color: #FFF8DC;
+        }
+
+        .header-hashtag {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            letter-spacing: 1px;
+            animation: fadeInUp 1.5s ease-out 1.5s both;
+            color: #FFF8DC;
+            text-shadow: 2px 2px 8px rgba(139, 69, 19, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FFF8DC;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        .content {
+            position: relative;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #FFFACD 0%, #F5DEB3 50%, #DEB887 100%);
+            z-index: 2;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            text-align: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #B8860B;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #FFD700, #DEB887);
+            border-radius: 2px;
+        }
+
+        .event-details {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #8B4513;
+            margin-bottom: 2rem;
+        }
+
+        .venue {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #DAA520;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .venue-address {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #8B4513;
+            margin: 0.5rem 0 1.5rem 0;
+            font-style: italic;
+        }
+
+        /* Color Theme Section */
+        .color-theme {
+            background: linear-gradient(135deg, rgba(255, 248, 220, 0.3) 0%, rgba(255, 215, 0, 0.1) 100%);
+            border: 1px solid rgba(255, 215, 0, 0.5);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .color-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .color-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(184, 134, 11, 0.2);
+        }
+
+        .color-role {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #B8860B;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-name {
+            font-size: 1rem;
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+
+        .color-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
+            border: 3px solid rgba(255, 248, 220, 0.9);
+        }
+
+        .color-golden-yellow {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+        }
+
+        .color-pastel-yellow {
+            background: linear-gradient(135deg, #FFFFE0, #F0E68C);
+        }
+
+        .color-light-brown {
+            background: linear-gradient(135deg, #D2B48C, #DEB887);
+        }
+
+        .color-brown {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+        }
+
+        .color-beige {
+            background: linear-gradient(135deg, #F5F5DC, #D2B48C);
+        }
+
+        /* Guest Policy Announcement Section */
+        .guest-policy {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 248, 220, 0.15) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guest-policy::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.08) 50%, transparent 70%);
+            animation: shimmerPolicy 4s ease-in-out infinite;
+        }
+
+        @keyframes shimmerPolicy {
+
+            0%,
+            100% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(100%);
+            }
+        }
+
+        .policy-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #DAA520;
+            position: relative;
+            z-index: 1;
+        }
+
+        .policy-text {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #8B4513;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .policy-highlight {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 248, 220, 0.3));
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #FFD700;
+            font-weight: 500;
+            color: #8B4513;
+            position: relative;
+            z-index: 1;
+        }
+
+        .policy-heart {
+            color: #B8860B;
+            font-size: 1.2rem;
+            margin: 0 0.3rem;
+        }
+
+        .policy-footer {
+            font-style: italic;
+            color: #8B4513;
+            font-size: 1rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Wedding Party Styles */
+        .wedding-party {
+            background: linear-gradient(135deg, rgba(255, 248, 220, 0.2) 0%, rgba(245, 222, 179, 0.2) 100%);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+        }
+
+        .party-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .party-category {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            text-align: center;
+        }
+
+        .party-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(184, 134, 11, 0.15);
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #B8860B;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 1px;
+            background: #DEB887;
+        }
+
+        .name-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+
+        .name-list li {
+            padding: 0.5rem 0;
+            color: #8B4513;
+            font-size: 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .name-list li:hover {
+            color: #DAA520;
+        }
+
+        .name-list li::before {
+            content: '♥';
+            color: rgba(255, 215, 0, 0.7);
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* Principal Sponsors Table Styling */
+        .name-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .name-table td {
+            padding: 0.8rem 1rem;
+            color: #8B4513;
+            font-size: 1rem;
+            text-align: center;
+            position: relative;
+            transition: color 0.3s ease;
+            vertical-align: top;
+            width: 50%;
+        }
+
+        .name-table td:hover {
+            color: #DAA520;
+        }
+
+        .name-table td::before {
+            content: '♥';
+            color: rgba(255, 215, 0, 0.7);
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* Special styling for Maid of Honor and Best Man */
+        .special-role {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(218, 165, 32, 0.2) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.6);
+        }
+
+        .special-role .category-title {
+            color: #B8860B;
+        }
+
+        .special-role .name-list li::before {
+            content: '👑';
+            color: #FFD700;
+        }
+
+        .principal-sponsors .name-list,
+        .guests .name-list {
+            display: block;
+            columns: 1;
+            column-gap: 2rem;
+        }
+
+        /* Thank You Section */
+        .thank-you-section {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 248, 220, 0.25) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thank-you-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .thank-you-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .thank-you-message {
+            font-size: 1.3rem;
+            color: #8B4513;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hashtag {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #B8860B;
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hashtag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(184, 134, 11, 0.2);
+        }
+
+        /* Hearts animation */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 215, 0, 0.7);
+            font-size: 20px;
+            animation: heartFloat 4s linear infinite;
+        }
+
+        @keyframes heartFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .names {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+                letter-spacing: 1px;
+                padding: 0 1rem;
+            }
+
+            .date {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .header-hashtag {
+                font-size: 0.9rem;
+                padding: 0 1rem;
+            }
+
+            .section {
+                margin: 0 0.5rem 2rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .event-details {
+                font-size: 1rem;
+            }
+
+            .venue {
+                font-size: 1.2rem;
+            }
+
+            .venue-address {
+                font-size: 0.9rem;
+            }
+
+            .party-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .party-category {
+                padding: 1.5rem 1rem;
+            }
+
+            .category-title {
+                font-size: 1.3rem;
+            }
+
+            .name-list {
+                columns: 1 !important;
+            }
+
+            .name-list li {
+                font-size: 0.95rem;
+                padding: 0.4rem 0;
+            }
+
+            .name-table {
+                display: block;
+            }
+
+            .name-table tbody {
+                display: block;
+            }
+
+            .name-table tr {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0;
+                margin-bottom: 0;
+            }
+
+            .name-table td {
+                display: block;
+                width: 100%;
+                padding: 0.5rem 0.5rem;
+                text-align: center;
+                border-bottom: none;
+            }
+
+            .color-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .color-item {
+                padding: 1rem;
+            }
+
+            .color-role {
+                font-size: 1.1rem;
+            }
+
+            .color-name {
+                font-size: 0.95rem;
+            }
+
+            .policy-text {
+                font-size: 0.95rem;
+            }
+
+            .policy-highlight {
+                padding: 0.8rem 1rem;
+                margin: 1rem 0;
+                font-size: 0.95rem;
+            }
+
+            .policy-icon {
+                font-size: 2.5rem;
+            }
+
+            .hashtag {
+                font-size: 1.2rem;
+                padding: 0.8rem 1.2rem;
+            }
+
+            .thank-you-message {
+                font-size: 1rem;
+            }
+
+            .thank-you-emoji {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .names {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .date {
+                font-size: 0.9rem;
+            }
+
+            .header-hashtag {
+                font-size: 0.8rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                margin: 0 0.5rem 1.5rem;
+                padding: 1.5rem 0.8rem;
+            }
+
+            .party-category {
+                padding: 1.2rem 0.8rem;
+            }
+        }
+
+        /* Tablet and larger screens */
+        @media (min-width: 768px) {
+
+            .principal-sponsors .name-list,
+            .guests .name-list {
+                columns: 2;
+            }
+
+            .party-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .special-role {
+                grid-column: span 1;
+            }
+
+            .principal-sponsors,
+            .guests {
+                grid-column: 1 / -1;
+            }
+        }
+
+        /* Desktop screens */
+        @media (min-width: 1024px) {
+
+            .principal-sponsors .name-list,
+            .guests .name-list {
+                columns: 3;
+            }
+        }
+
+        .hashtag-container {
+            overflow-y: auto;
+        }
+
+        .hashtag-wrapper {
+            min-height: 100px;
+        }
+
+        .hashtag {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* iOS specific fixes */
+        @supports (-webkit-touch-callout: none) {
+            .header {
+                background-attachment: scroll;
+                /* iOS doesn't support fixed backgrounds well */
+            }
+        }
+
+        /* iPhone specific fixes */
+        @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+            .header {
+                background-attachment: scroll;
+                /* Mobile devices get scroll instead */
+                background-size: cover;
+                -webkit-background-size: cover;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .header {
+                background-attachment: fixed;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                background-attachment: scroll;
+                /* Create depth with multiple background layers */
+                background-image:
+                    linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)),
+                    url('https://raw.githubusercontent.com/kemuelxraven/wedding-invitation/main/kim1.png');
+            }
+
+            .header.scrolled {
+                background-position: center 10%;
+                transition: background-position 0.3s ease;
+            }
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="particles" id="particles"></div>
     <div class="hearts" id="hearts"></div>
 
     <div class="header">
-      <h1 class="names">Kemuel and Raven</h1>
-      <p class="subtitle">You're Invited to Celebrate Our Wedding</p>
-      <div class="date">November 30, 2025</div>
-      <div class="header-hashtag">#APerfectNiteForKemuel&Raven</div>
-      <div class="scroll-indicator">
-        <div style="font-size: 2rem;">↓</div>
-        <div style="font-size: 0.9rem; margin-top: 0.5rem;">Scroll</div>
-      </div>
+        <h1 class="names">Kemuel and Raven</h1>
+        <p class="subtitle">You're Invited to Celebrate Our Wedding</p>
+        <div class="date">November 30, 2025</div>
+        <div class="header-hashtag">#APerfectNiteForKemuel&Raven</div>
+        <div class="scroll-indicator">
+            <div style="font-size: 2rem;">↓</div>
+            <div style="font-size: 0.9rem; margin-top: 0.5rem;">Scroll</div>
+        </div>
     </div>
 
     <div class="content">
-      <div class="section">
-        <h2 class="section-title">Our Story Begins</h2>
-        <div class="event-details">
-          Join us for a day full of love, laughter, and memories that will last
-          a lifetime.
-          <br><br>
-          We can't wait to celebrate this special moment with our closest family
-          and friends.
-          <br><br>
-          The ceremony and celebration will be held at:
-          <div class="venue">Fruella's Events Venue Calamba</div>
-          <div class="venue-address">
-            Dona Rosario Bayview Subdivision,<br>
-            101 Bayview St. Calamba, 4027 Laguna
-          </div>
-          <strong>Ceremony starts at 3:00 PM followed by reception</strong>
-        </div>
-      </div>
-
-      <div class="section color-theme">
-        <h2 class="section-title">Wedding Color Theme</h2>
-        <p class="event-details" style="margin-bottom: 2rem;">
-          To make our special day even more beautiful, we kindly request that
-          you coordinate with our wedding colors.
-          Here's what each member of our wedding party and guests should wear:
-        </p>
-
-        <div class="color-grid">
-          <div class="color-item">
-            <div class="color-swatch color-golden-yellow"></div>
-            <div class="color-role">Maid of Honor</div>
-            <div class="color-name">Golden Yellow</div>
-          </div>
-
-          <div class="color-item">
-            <div class="color-swatch color-pastel-yellow"></div>
-            <div class="color-role">Bridesmaids</div>
-            <div class="color-name">Pastel Yellow</div>
-          </div>
-
-          <div class="color-item">
-            <div class="color-swatch color-light-brown"></div>
-            <div class="color-role">Best Man/Woman</div>
-            <div class="color-name">Light Brown</div>
-          </div>
-
-          <div class="color-item">
-            <div class="color-swatch color-brown"></div>
-            <div class="color-role">Groomsmen</div>
-            <div class="color-name">Brown</div>
-          </div>
-
-          <div class="color-item">
-            <div class="color-swatch color-beige"></div>
-            <div class="color-role">Principal Sponsors</div>
-            <div class="color-name">Beige</div>
-          </div>
-
-          <div class="color-item">
-            <div class="color-swatch" style="background-color: #8B9467;"></div>
-            <div class="color-role">Guests</div>
-            <div class="color-name">Sage Green</div>
-          </div>
+        <div class="section">
+            <h2 class="section-title">Our Story Begins</h2>
+            <div class="event-details">
+                Join us for a day full of love, laughter, and memories that will last
+                a lifetime.
+                <br><br>
+                We can't wait to celebrate this special moment with our closest family
+                and friends.
+                <br><br>
+                The ceremony and celebration will be held at:
+                <div class="venue">Fruella's Events Venue Calamba</div>
+                <div class="venue-address">
+                    Dona Rosario Bayview Subdivision,<br>
+                    101 Bayview St. Calamba, 4027 Laguna
+                </div>
+                <strong>Ceremony starts at 3:00 PM followed by reception</strong>
+            </div>
         </div>
 
-        <p style="margin-top: 2rem; font-style: italic; color: #4a5d3b;">
-          Thank you for helping us create a harmonious and beautiful
-          celebration! 💕
-        </p>
-      </div>
+        <div class="section color-theme">
+            <h2 class="section-title">Wedding Color Theme</h2>
+            <p class="event-details" style="margin-bottom: 2rem;">
+                To make our special day even more beautiful, we kindly request that
+                you coordinate with our wedding colors.
+                Here's what each member of our wedding party and guests should wear:
+            </p>
 
-      <div class="section guest-policy">
-        <div class="policy-icon">👥💕</div>
-        <h2 class="section-title">Important Guest Information</h2>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-swatch color-golden-yellow"></div>
+                    <div class="color-role">Maid of Honor</div>
+                    <div class="color-name">Golden Yellow</div>
+                </div>
 
-        <div class="policy-text">
-          We are so excited to celebrate this special day with the people who
-          mean the most to us!
+                <div class="color-item">
+                    <div class="color-swatch color-pastel-yellow"></div>
+                    <div class="color-role">Bridesmaids</div>
+                    <div class="color-name">Pastel Yellow</div>
+                </div>
+
+                <div class="color-item">
+                    <div class="color-swatch color-light-brown"></div>
+                    <div class="color-role">Best Man/Woman</div>
+                    <div class="color-name">Light Brown</div>
+                </div>
+
+                <div class="color-item">
+                    <div class="color-swatch color-brown"></div>
+                    <div class="color-role">Groomsmen</div>
+                    <div class="color-name">Brown</div>
+                </div>
+
+                <div class="color-item">
+                    <div class="color-swatch color-beige"></div>
+                    <div class="color-role">Principal Sponsors</div>
+                    <div class="color-name">Beige</div>
+                </div>
+
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: #8B9467;"></div>
+                    <div class="color-role">Guests</div>
+                    <div class="color-name">Sage Green</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem; font-style: italic; color: #4a5d3b;">
+                Thank you for helping us create a harmonious and beautiful
+                celebration! 💕
+            </p>
         </div>
 
-        <div class="policy-highlight">
-          <span class="policy-heart">💝</span>
-          Our guest list has been thoughtfully curated to include only our
-          closest family and friends.
-          We kindly ask that you respect our decision to keep this celebration
-          intimate by not bringing
-          additional guests who are not specifically listed below.
-          <span class="policy-heart">💝</span>
+        <div class="section guest-policy">
+            <div class="policy-icon">👥💕</div>
+            <h2 class="section-title">Important Guest Information</h2>
+
+            <div class="policy-text">
+                We are so excited to celebrate this special day with the people who
+                mean the most to us!
+            </div>
+
+            <div class="policy-highlight">
+                <span class="policy-heart">💝</span>
+                Our guest list has been thoughtfully curated to include only our
+                closest family and friends.
+                We kindly ask that you respect our decision to keep this celebration
+                intimate by not bringing
+                additional guests who are not specifically listed below.
+                <span class="policy-heart">💝</span>
+            </div>
+
+            <div class="policy-text">
+                This helps us ensure that everyone can enjoy a meaningful and
+                comfortable celebration together.
+                Unfortunately, guests who are not on our list will not be able to
+                enter the venue, as we have
+                planned our space and arrangements specifically for our invited loved
+                ones.
+            </div>
+
+            <div class="policy-footer">
+                Thank you for understanding and helping us make this day as special as
+                we've always dreamed!
+                <span class="policy-heart">💕</span>
+            </div>
         </div>
 
-        <div class="policy-text">
-          This helps us ensure that everyone can enjoy a meaningful and
-          comfortable celebration together.
-          Unfortunately, guests who are not on our list will not be able to
-          enter the venue, as we have
-          planned our space and arrangements specifically for our invited loved
-          ones.
+        <div class="section wedding-party">
+            <h2 class="section-title">Our Wedding Party</h2>
+            <div class="party-grid">
+                <div class="party-category principal-sponsors">
+                    <h3 class="category-title">Principal Sponsors</h3>
+                    <table class="name-table">
+                        <tbody>
+                            <tr>
+                                <td>Ninong Daniel Caunin</td>
+                                <td>Ninang Brigilda Caunin</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Jethro Pilapil</td>
+                                <td>Ninang Grace Caunin</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Jehristian Alcabasa</td>
+                                <td>Ninang Jhenalyn Pilapil</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Gilbert Gabito</td>
+                                <td>Ninang Jonnalaine Javier</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Jherome Pilapil</td>
+                                <td>Ninang Abegail Pilapil</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Rico Nite</td>
+                                <td>Ninang Malou Malinao</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Milo Cantillan</td>
+                                <td>Ninang Ruby Emberga</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Arcelito Quiatchon</td>
+                                <td>Ninang Len Bernabe</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Roderick Saporna</td>
+                                <td>Ninang Melanie Saporna</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong Liberato Elago</td>
+                                <td>Ninang Jenie Rocero</td>
+                            </tr>
+                            <tr>
+                                <td>Ninong JSSUPT Ray De Luna</td>
+                                <td>Ninang Thess Agustin</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="party-category special-role">
+                    <h3 class="category-title">Best Man/Woman</h3>
+                    <ul class="name-list">
+                        <li>Jeremi Agustin</li>
+                        <li>Ruth Ann Nite</li>
+                    </ul>
+                </div>
+
+                <div class="party-category special-role">
+                    <h3 class="category-title">Maid of Honor</h3>
+                    <ul class="name-list">
+                        <li>Zylene Mae Del Rosario</li>
+                        <li>Descerey Panganiban</li>
+                    </ul>
+                </div>
+
+                <div class="party-category">
+                    <h3 class="category-title">Groomsmen</h3>
+                    <ul class="name-list">
+                        <li>Christian Mico</li>
+                        <li>John Errol Sonido</li>
+                        <li>Andrei Zaide</li>
+                        <li>Jeremiah Magno</li>
+                        <li>Paul Palma</li>
+                        <li>Jherwin Pilapil</li>
+                    </ul>
+                </div>
+
+                <div class="party-category">
+                    <h3 class="category-title">Bridesmaids</h3>
+                    <ul class="name-list">
+                        <li>Danise Monter</li>
+                        <li>Kate Manalo</li>
+                        <li>Yna Grace Pilapil</li>
+                        <li>Nicole Velasco</li>
+                        <li>Coleen Mance</li>
+                        <li>Lorica Jane Nite</li>
+                    </ul>
+                </div>
+
+                <div class="party-category guests">
+                    <h3 class="category-title">Other Entourage</h3>
+                    <ul class="name-list" style="columns: 1; column-gap: 2rem;">
+                        <li><b>Flower Girl: </b>Cindy San Pedro</li>
+                        <li><b>Flower Girl: </b>Maine Emberga</li>
+                        <li><b>Ring Bearer: </b>Zeus Rheign Entredicho</li>
+                        <li><b>Coin Bearer: </b>Prince Rhei Entredicho</li>
+                        <li><b>Bible Bearer: </b>Franky San Pedro</li>
+                        <li><b>Banner Bearer: </b>Ryzza San Juan</li>
+                    </ul>
+                </div>
+
+                <div class="party-category guests">
+                    <h3 class="category-title">Guests</h3>
+                    <ul class="name-list">
+                        <li>Renzo San Juan</li>
+                        <li>Librada Entredicho</li>
+                        <li>Rhodora Lucero</li>
+                        <li>Zoe Journey Lucero</li>
+                        <li>Ivan Emberga</li>
+                        <li>Jun Emberga</li>
+                        <li>Rose San Pedro</li>
+                        <li>Francis San Pedro</li>
+                        <li>Princess Entredicho</li>
+                        <li>Ellenor Del Rosario</li>
+                        <li>Yzabel Del Rosario</li>
+                        <li>Teresita Arguelles</li>
+                        <li>Nenita Ulanday</li>
+                        <li>Carmen Papa</li>
+                        <li>Rizalina Paralejas</li>
+                        <li>Renato Paralejas</li>
+                        <li>Odette Bernabe</li>
+                        <li>Norma Del Rosario</li>
+                        <li>Malou Del Rosario</li>
+                        <li>Malou Entredicho</li>
+                        <li>Esther Tolentino</li>
+                        <li>Eufrocina Pilapil</li>
+                        <li>Jefferson Pilapil</li>
+                        <li>Jhenesis Padin</li>
+                        <li>Franklin Padin</li>
+                        <li>Arsenia Caunin</li>
+                        <li>Angel Caunin</li>
+                        <li>Sarah Ramos</li>
+                        <li>RJ Ramos</li>
+                        <li>Valeriana Alcabasa</li>
+                        <li>Reynaldo Alcabasa</li>
+                        <li>Joshua Alcabasa</li>
+                        <li>Crissa Mae Villanueva</li>
+                        <li>Cate Mikaela Villanueva</li>
+                        <li>Cris Micole Villanueva</li>
+                        <li>Tommy Villanueva</li>
+                        <li>Victor Caunin</li>
+                        <li>Joyce Caunin</li>
+                        <li>Luzviminda Nite</li>
+                        <li>Mark Nite</li>
+                        <li>Rose Nite</li>
+                        <li>Pio Nite</li>
+                        <li>Randy Rocero</li>
+                        <li>Lorna Nite</li>
+                        <li>Zia Nite</li>
+                        <li>Eron Paredes</li>
+                        <li>Pipsi Nite</li>
+                        <li>Jenelyn Alcabasa</li>
+                        <li>Jelisha Alcabasa</li>
+                        <li>Jehlyn Alcabasa</li>
+                        <li>Ana Gabito</li>
+                        <li>Daisy Nite</li>
+                        <li>Justine Reyes</li>
+                        <li>Angelo Angeles </li>
+                        <li>Alberto Jain III</li>
+                        <li>Faith Dela Cruz</li>
+                        <li>Justine Jay Dacocos</li>
+                        <li>Gian Hailar</li>
+                        <li>Justine Ivan Almonte</li>
+                        <li>Gelvi Rosaria</li>
+                        <li>Josh Jaurige</li>
+                        <li>Jowee Kyla Maramag</li>
+                        <li>Jorge Russel Cabag</li>
+                        <li>Christopher Quinay</li>
+                        <li>Christian Ardena</li>
+                        <li>Jose Benedic Garcia</li>
+                        <li>Jessica Palulan</li>
+                        <li>Jimz Bryan Abecilla</li>
+                        <li>Maria Abegail Mendoza</li>
+                        <li>Hannah Sophia Balug</li>
+                        <li>Kenneth Rejano</li>
+                        <li>Christian Losamnia</li>
+                        <li>Robel Ann Ramilo</li>
+                        <li>Jannine Matias</li>
+                        <li>Mrs. Cantillan</li>
+                        <li>Queencie Nissi Brocoy</li>
+                        <li>Mariejo Agustin</li>
+                        <li>Aaron Sambajon</li>
+                        <li>Remedios Solluege</li>
+                        <li>Christian Frias</li>
+                    </ul>
+                </div>
+
+                <div class="party-category guests">
+                    <h3 class="category-title">Suppliers</h3>
+                    <ul class="name-list" style="columns: 1; column-gap: 2rem;">
+                        <li><b>Catering and Services: </b>Fanny Catering Services</li>
+                        <li><b>Photo and Video Coverage: </b>Geraldo Creatives</li>
+                        <li><b>Host: </b>Jomar Aquino</li>
+                        <li><b>Sounds and Lights: </b>Audio District</li>
+                        <li><b>Coordinator: </b>Junto's Events Organizer</li>
+                        <li><b>Souvenir: </b>Happy Endings by Zellene</li>
+                        <li><b>Hair and Make-up: </b>Angelica Sambajon</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="policy-footer">
-          Thank you for understanding and helping us make this day as special as
-          we've always dreamed!
-          <span class="policy-heart">💕</span>
+        <div class="section thank-you-section">
+            <div class="thank-you-emoji" style="color: rgb(255, 255, 168);">&#9829;&#9829;&#9829;</div>
+            <h2 class="section-title">Thank You!</h2>
+            <div class="thank-you-message">
+                We are incredibly grateful for your presence and support as we begin
+                this beautiful journey together.
+                <br><br>
+                See you on our special day!
+            </div>
+            <div class="hashtag-container">
+                <div class="hashtag-wrapper">
+                    <div class="hashtag">#APerfectNiteForKemuel&Raven</div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="section wedding-party">
-        <h2 class="section-title">Our Wedding Party</h2>
-        <div class="party-grid">
-          <div class="party-category principal-sponsors">
-            <h3 class="category-title">Principal Sponsors</h3>
-            <table class="name-table">
-              <tbody>
-                <tr>
-                  <td>Ninong Daniel Caunin</td>
-                  <td>Ninang Brigilda Caunin</td>
-                </tr>
-                <tr>
-                  <td>Ninong Jethro Pilapil</td>
-                  <td>Ninang Grace Caunin</td>
-                </tr>
-                <tr>
-                  <td>Ninong Jehristian Alcabasa</td>
-                  <td>Ninang Jhenalyn Pilapil</td>
-                </tr>
-                <tr>
-                  <td>Ninong Gilbert Gabito</td>
-                  <td>Ninang Jonnalaine Javier</td>
-                </tr>
-                <tr>
-                  <td>Ninong Jherome Pilapil</td>
-                  <td>Ninang Abegail Pilapil</td>
-                </tr>
-                <tr>
-                  <td>Ninong Rico Nite</td>
-                  <td>Ninang Malou Malinao</td>
-                </tr>
-                <tr>
-                  <td>Ninong Milo Cantillan</td>
-                  <td>Ninang Ruby Emberga</td>
-                </tr>
-                <tr>
-                  <td>Ninong Arcelito Quiatchon</td>
-                  <td>Ninang Len Bernabe</td>
-                </tr>
-                <tr>
-                  <td>Ninong Roderick Saporna</td>
-                  <td>Ninang Melanie Saporna</td>
-                </tr>
-                <tr>
-                  <td>Ninong Liberato Elago</td>
-                  <td>Ninang Jenie Rocero</td>
-                </tr>
-                <tr>
-                  <td>Ninong JSSUPT Ray De Luna</td>
-                  <td>Ninang Thess Agustin</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="party-category special-role">
-            <h3 class="category-title">Best Man/Woman</h3>
-            <ul class="name-list">
-              <li>Jeremi Agustin</li>
-              <li>Ruth Ann Nite</li>
-            </ul>
-          </div>
-
-          <div class="party-category special-role">
-            <h3 class="category-title">Maid of Honor</h3>
-            <ul class="name-list">
-              <li>Zylene Mae Del Rosario</li>
-              <li>Descerey Panganiban</li>
-            </ul>
-          </div>
-
-          <div class="party-category">
-            <h3 class="category-title">Groomsmen</h3>
-            <ul class="name-list">
-              <li>Christian Mico</li>
-              <li>John Errol Sonido</li>
-              <li>Andrei Zaide</li>
-              <li>Jeremiah Magno</li>
-              <li>Paul Palma</li>
-              <li>Jherwin Pilapil</li>
-            </ul>
-          </div>
-
-          <div class="party-category">
-            <h3 class="category-title">Bridesmaids</h3>
-            <ul class="name-list">
-              <li>Danise Monter</li>
-              <li>Kate Manalo</li>
-              <li>Yna Grace Pilapil</li>
-              <li>Nicole Velasco</li>
-              <li>Coleen Mance</li>
-              <li>Lorica Jane Nite</li>
-            </ul>
-          </div>
-
-          <div class="party-category guests">
-            <h3 class="category-title">Other Entourage</h3>
-            <ul class="name-list" style="columns: 1; column-gap: 2rem;">
-              <li><b>Flower Girl: </b>Cindy San Pedro</li>
-              <li><b>Flower Girl: </b>Maine Emberga</li>
-              <li><b>Ring Bearer: </b>Zeus Rheign Entredicho</li>
-              <li><b>Coin Bearer: </b>Prince Rhei Entredicho</li>
-              <li><b>Bible Bearer: </b>Franky San Pedro</li>
-              <li><b>Banner Bearer: </b>Ryzza San Juan</li>
-            </ul>
-          </div>
-
-          <div class="party-category guests">
-            <h3 class="category-title">Guests</h3>
-            <ul class="name-list">
-              <li>Renzo San Juan</li>
-              <li>Librada Entredicho</li>
-              <li>Rhodora Lucero</li>
-              <li>Zoe Journey Lucero</li>
-              <li>Ivan Emberga</li>
-              <li>Jun Emberga</li>
-              <li>Rose San Pedro</li>
-              <li>Francis San Pedro</li>
-              <li>Princess Entredicho</li>
-              <li>Ellenor Del Rosario</li>
-              <li>Yzabel Del Rosario</li>
-              <li>Teresita Arguelles</li>
-              <li>Nenita Ulanday</li>
-              <li>Carmen Papa</li>
-              <li>Rizalina Paralejas</li>
-              <li>Renato Paralejas</li>
-              <li>Odette Bernabe</li>
-              <li>Norma Del Rosario</li>
-              <li>Malou Del Rosario</li>
-              <li>Malou Entredicho</li>
-              <li>Esther Tolentino</li>
-              <li>Eufrocina Pilapil</li>
-              <li>Jefferson Pilapil</li>
-              <li>Jhenesis Padin</li>
-              <li>Franklin Padin</li>
-              <li>Arsenia Caunin</li>
-              <li>Angel Caunin</li>
-              <li>Sarah Ramos</li>
-              <li>RJ Ramos</li>
-              <li>Valeriana Alcabasa</li>
-              <li>Reynaldo Alcabasa</li>
-              <li>Joshua Alcabasa</li>
-              <li>Crissa Mae Villanueva</li>
-              <li>Cate Mikaela Villanueva</li>
-              <li>Cris Micole Villanueva</li>
-              <li>Tommy Villanueva</li>
-              <li>Victor Caunin</li>
-              <li>Joyce Caunin</li>
-              <li>Luzviminda Nite</li>
-              <li>Mark Nite</li>
-              <li>Rose Nite</li>
-              <li>Pio Nite</li>
-              <li>Randy Rocero</li>
-              <li>Lorna Nite</li>
-              <li>Zia Nite</li>
-              <li>Eron Paredes</li>
-              <li>Pipsi Nite</li>
-              <li>Jenelyn Alcabasa</li>
-              <li>Jelisha Alcabasa</li>
-              <li>Jehlyn Alcabasa</li>
-              <li>Ana Gabito</li>
-              <li>Daisy Nite</li>
-              <li>Justine Reyes</li>
-              <li>Angelo Angeles </li>
-              <li>Alberto Jain III</li>
-              <li>Faith Dela Cruz</li>
-              <li>Justine Jay Dacocos</li>
-              <li>Gian Hailar</li>
-              <li>Justine Ivan Almonte</li>
-              <li>Gelvi Rosaria</li>
-              <li>Josh Jaurige</li>
-              <li>Jowee Kyla Maramag</li>
-              <li>Jorge Russel Cabag</li>
-              <li>Christopher Quinay</li>
-              <li>Christian Ardena</li>
-              <li>Jose Benedic Garcia</li>
-              <li>Jessica Palulan</li>
-              <li>Jimz Bryan Abecilla</li>
-              <li>Maria Abegail Mendoza</li>
-              <li>Hannah Sophia Balug</li>
-              <li>Kenneth Rejano</li>
-              <li>Christian Losamnia</li>
-              <li>Robel Ann Ramilo</li>
-              <li>Jannine Matias</li>
-              <li>Mrs. Cantillan</li>
-              <li>Queencie Nissi Brocoy</li>
-              <li>Mariejo Agustin</li>
-              <li>Aaron Sambajon</li>
-              <li>Remedios Solluege</li>
-              <li>Christian Frias</li>
-            </ul>
-          </div>
-
-          <div class="party-category guests">
-            <h3 class="category-title">Suppliers</h3>
-            <ul class="name-list" style="columns: 1; column-gap: 2rem;">
-              <li><b>Catering and Services: </b>Fanny Catering Services</li>
-              <li><b>Photo and Video Coverage: </b>Geraldo Creatives</li>
-              <li><b>Host: </b>Jomar Aquino</li>
-              <li><b>Sounds and Lights: </b>Audio District</li>
-              <li><b>Coordinator: </b>Junto's Events Organizer</li>
-              <li><b>Souvenir: </b>Happy Endings by Zellene</li>
-              <li><b>Hair and Make-up: </b>Angelica Sambajon</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="section thank-you-section">
-        <div class="thank-you-emoji"
-          style="color: rgb(255, 255, 168);">&#9829;&#9829;&#9829;</div>
-        <h2 class="section-title">Thank You!</h2>
-        <div class="thank-you-message">
-          We are incredibly grateful for your presence and support as we begin
-          this beautiful journey together.
-          <br><br>
-          See you on our special day!
-        </div>
-        <div class="hashtag-container">
-          <div class="hashtag-wrapper">
-            <div class="hashtag">#APerfectNiteForKemuel&Raven</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script>
-      // Create floating particles
-      const particlesContainer = document.getElementById('particles');
-      for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 6 + 's';
-        particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
-        particlesContainer.appendChild(particle);
-      }
-
-      // Create floating hearts
-      const heartsContainer = document.getElementById('hearts');
-      setInterval(() => {
-        const heart = document.createElement('div');
-        heart.className = 'heart';
-        heart.innerHTML = '💛';
-        heart.style.left = Math.random() * 100 + '%';
-        heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
-        heartsContainer.appendChild(heart);
-        
-        setTimeout(() => {
-          heart.remove();
-        }, 5000);
-      }, 300);
-
-      document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.header');
-    
-    // Only apply mobile parallax if needed
-    if (window.innerWidth <= 768) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.5;
-            
-            // Apply subtle parallax effect for mobile
-            header.style.transform = `translateY(${rate}px)`;
-        });
-    }
-    
-    // Add scrolled class for background position change
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        // Create floating particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            particlesContainer.appendChild(particle);
         }
-    });
-});
+
+        // Create floating hearts
+        const heartsContainer = document.getElementById('hearts');
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💛';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            heartsContainer.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }, 300);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('.header');
+
+            // Only apply mobile parallax if needed
+            if (window.innerWidth <= 768) {
+                window.addEventListener('scroll', function () {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * 0.5;
+
+                    // Apply subtle parallax effect for mobile
+                    header.style.transform = `translateY(${rate}px)`;
+                });
+            }
+
+            // Add scrolled class for background position change
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
     </script>
-  </body>
+</body>
 
 </html>
