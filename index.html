@@ -61,7 +61,6 @@ body {
                 url('https://raw.githubusercontent.com/kemuelxraven/wedding-invitation/main/kim1.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Add this back for parallax effect */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -70,6 +69,8 @@ body {
     color: white;
     text-align: center;
     z-index: 2;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .header::before {
@@ -853,6 +854,27 @@ body {
         -webkit-background-size: cover;
     }
 }
+
+      @media (min-width: 769px) {
+    .header {
+        background-attachment: fixed;
+    }
+}
+
+      @media (max-width: 768px) {
+    .header {
+        background-attachment: scroll;
+        /* Create depth with multiple background layers */
+        background-image: 
+            linear-gradient(rgba(135, 169, 107, 0.4), rgba(135, 169, 107, 0.4)),
+            url('https://raw.githubusercontent.com/kemuelxraven/wedding-invitation/main/kim1.png');
+    }
+  
+    .header.scrolled {
+        background-position: center 10%;
+        transition: background-position 0.3s ease;
+    }
+}
     </style>
   </head>
 
@@ -1230,6 +1252,30 @@ body {
           heart.remove();
         }, 5000);
       }, 300);
+
+      document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+    
+    // Only apply mobile parallax if needed
+    if (window.innerWidth <= 768) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * 0.5;
+            
+            // Apply subtle parallax effect for mobile
+            header.style.transform = `translateY(${rate}px)`;
+        });
+    }
+    
+    // Add scrolled class for background position change
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
     </script>
   </body>
 
