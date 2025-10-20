@@ -61,10 +61,7 @@ body {
                 url('https://raw.githubusercontent.com/kemuelxraven/wedding-invitation/main/kim1.png');
     background-size: cover;
     background-position: center;
-    /* Remove background-attachment: fixed and add iOS fix */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-attachment: fixed; /* Add this back for parallax effect */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -73,8 +70,6 @@ body {
     color: white;
     text-align: center;
     z-index: 2;
-    /* Add this for iOS Safari */
-    background-attachment: scroll;
 }
 
 .header::before {
@@ -846,14 +841,14 @@ body {
       /* iOS specific fixes */
 @supports (-webkit-touch-callout: none) {
     .header {
-        background-attachment: scroll;
+        background-attachment: scroll; /* iOS doesn't support fixed backgrounds well */
     }
 }
 
 /* iPhone specific fixes */
 @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
     .header {
-        background-attachment: scroll;
+        background-attachment: scroll; /* Mobile devices get scroll instead */
         background-size: cover;
         -webkit-background-size: cover;
     }
