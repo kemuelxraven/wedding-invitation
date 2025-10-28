@@ -1288,19 +1288,18 @@
             }, 5000);
         }, 300);
 
+        
         document.addEventListener('DOMContentLoaded', function () {
             const header = document.querySelector('.header');
 
-            // Only apply mobile parallax if needed
-            if (window.innerWidth <= 768) {
-                window.addEventListener('scroll', function () {
-                    const scrolled = window.pageYOffset;
-                    const rate = scrolled * 0.5;
+            // Apply parallax effect for all devices
+            window.addEventListener('scroll', function () {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.5;
 
-                    // Apply subtle parallax effect for mobile
-                    header.style.transform = `translateY(${rate}px)`;
-                });
-            }
+                // Apply parallax effect
+                header.style.transform = `translateY(${rate}px)`;
+            });
 
             // Add scrolled class for background position change
             window.addEventListener('scroll', function () {
