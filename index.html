@@ -558,7 +558,10 @@
 
         /* Thank You Section */
         .thank-you-section {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 248, 220, 0.25) 100%);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 248, 220, 0.25) 100%),
+                url('https://raw.githubusercontent.com/kemuelxraven/wedding-invitation/main/kim2.png');
+            background-size: cover;
+            background-position: center;
             border: 2px solid rgba(255, 215, 0, 0.5);
             padding: 3rem 2rem;
             position: relative;
@@ -574,6 +577,17 @@
             bottom: 0;
             background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
             animation: pulse 3s ease-in-out infinite;
+        }
+
+        .thank-you-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            z-index: 0;
         }
 
         @keyframes pulse {
@@ -1296,7 +1310,7 @@
             }, 5000);
         }, 300);
 
-        
+
         document.addEventListener('DOMContentLoaded', function () {
             const header = document.querySelector('.header');
 
